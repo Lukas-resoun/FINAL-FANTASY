@@ -8,8 +8,10 @@ var commands = new Dictionary<string, BaseCommand>()
     { "look", new LookAroundCommand() },
 
     { "help", new HelpCommand() },
+    { "test", new TestCommand() },
+    { "eat", new EatyourselfCommand() },
     { "quit", new QuitCommand() }
-};
+}; 
 
 AnsiConsole.MarkupLine(world.Intro);
 

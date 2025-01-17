@@ -14,7 +14,8 @@ namespace Adventure.Commands
             AnsiConsole.WriteLine("To interact with the game, use following commands ...");
             AnsiConsole.WriteLine("---");
             AnsiConsole.WriteLine("look - looks around the room");
-
+            AnsiConsole.WriteLine("test - test the game");
+            AnsiConsole.WriteLine("eat - your self");
             AnsiConsole.WriteLine();
             AnsiConsole.WriteLine("help - shows this help");
             AnsiConsole.WriteLine("quit - exits the game");
