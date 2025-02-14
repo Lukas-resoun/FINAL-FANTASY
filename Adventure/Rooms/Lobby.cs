@@ -12,6 +12,7 @@ namespace Adventure.Rooms
         public Lobby()
         {
             AddItem(new Rock());
+            
         }
         public override string Description => $"Dim looby with {string.Join(",", items)}";
 

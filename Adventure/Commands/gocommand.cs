@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 
 namespace Adventure.Commands
 {
-    internal class EatyourselfCommand : BaseCommand
+    public class Gocommand : BaseCommand
     {
         public override void Execute(World world, params string[] @params)
         {
-            AnsiConsole.MarkupLine("you are starting eating yourself until there is only a head wich says [yellow] I am dellicios[/]");
+            if (!@params. Any())
+            {
+                AnsiConsole.MarkupLine($"you must enter where you go");
+            } return;
         }
     }
 }

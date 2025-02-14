@@ -13,6 +13,8 @@ namespace Adventure.Commands
         public override void Execute(World world, params string[] @params)
         {
             AnsiConsole.MarkupLine($"You looked around and see a [green]{world.CurrentRoom.Description}[/]");
+            AnsiConsole.MarkupLine($"You also see [green]{string.Join(", ", world.CurrentRoom.items)}[/]");
+            AnsiConsole.MarkupLine($"and You also see [green]{string.Join(", ", world.CurrentRoom.neighbours)}[/]");
         }
     }
 }

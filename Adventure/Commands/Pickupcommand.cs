@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Adventure.Commands
 {
-    internal class EatyourselfCommand : BaseCommand
+    internal class Pickupcommand : BaseCommand
     {
         public override void Execute(World world, params string[] @params)
         {
-            AnsiConsole.MarkupLine("you are starting eating yourself until there is only a head wich says [yellow] I am dellicios[/]");
+            var item = world.CurrentRoom.items.FirstOrDefault(i => i.Name == @params[0]);
+            world.CurrentRoom.RemoveItem(item);
         }
     }
 }

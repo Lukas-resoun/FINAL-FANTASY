@@ -15,8 +15,9 @@ namespace Adventure.Commands
             AnsiConsole.WriteLine("---");
             AnsiConsole.WriteLine("look - looks around the room");
             AnsiConsole.WriteLine("test - test the game");
-            AnsiConsole.WriteLine("eat - your self");
-            AnsiConsole.WriteLine();
+            AnsiConsole.WriteLine("eat - your self?!");
+            AnsiConsole.WriteLine("pick [current item name] - pick up current item");
+            AnsiConsole.WriteLine("go [current room name] - go to current room");
             AnsiConsole.WriteLine("help - shows this help");
             AnsiConsole.WriteLine("quit - exits the game");
         }
