@@ -11,10 +11,31 @@ namespace Adventure.Commands
     {
         public override void Execute(World world, params string[] @params)
         {
+            
             if (!@params. Any())
             {
                 AnsiConsole.MarkupLine($"you must enter where you go");
-            } return;
+                return;
+            }
+
+            var room = world.CurrentRoom.neighbours. FirstOrDefault(n => n.Name == @params[0]);
+
+            if (room == null )
+            {
+                AnsiConsole.MarkupLine("[mediumpurple2] Wtf, this room donť exist.[/]");
+                return;
+            }
+
+            world.SwitchRoom(room);
+            
+                
+            
+
+
+
+
+
+
         }
     }
 }

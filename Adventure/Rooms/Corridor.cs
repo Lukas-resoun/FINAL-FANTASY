@@ -10,10 +10,7 @@ namespace Adventure.Rooms
     public class Corridor : BaseRoom
 
     {
-        public Corridor()
-        {
-            AddItem(new Sword());
-        }
+        
         public override string Name => "Corridor";
 
         public override string Description => "dark and empty corridor";
