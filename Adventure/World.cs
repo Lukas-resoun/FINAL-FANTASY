@@ -17,10 +17,17 @@ namespace Adventure
             var lobby = new Lobby();
             var corridor = new Corridor();
             var armory = new Armory();
+            var badroom1 = new Badroom1();
+            var staircase = new Starcase();
 
             lobby.RegisterNeighbour(corridor);
             corridor.RegisterNeighbour(lobby);
             corridor.RegisterNeighbour(armory);
+            corridor.RegisterNeighbour(badroom1);
+            armory.RegisterNeighbour(corridor);
+            armory.RegisterNeighbour(staircase);
+            badroom1.RegisterNeighbour(corridor);
+            staircase.RegisterNeighbour(armory);
 
             CurrentRoom = lobby;
             

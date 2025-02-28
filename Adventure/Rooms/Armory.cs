@@ -13,6 +13,7 @@ namespace Adventure.Rooms
         public Armory()
         {
             AddItem(new Sword());
+            AddItem(new Shield());
 
         }
         public override string Name => "Armory";
