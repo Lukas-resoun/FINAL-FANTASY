@@ -19,6 +19,9 @@ namespace Adventure
             var armory = new Armory();
             var badroom1 = new Badroom1();
             var staircase = new Starcase();
+            var Upperfloor = new Upperfloor();
+            var Trophyroom = new Trophyroom();
+            var Badroom2 = new Badroom2();
 
             lobby.RegisterNeighbour(corridor);
             corridor.RegisterNeighbour(lobby);
@@ -28,6 +31,12 @@ namespace Adventure
             armory.RegisterNeighbour(staircase);
             badroom1.RegisterNeighbour(corridor);
             staircase.RegisterNeighbour(armory);
+            staircase.RegisterNeighbour(Upperfloor);
+            Upperfloor.RegisterNeighbour(staircase);
+            Upperfloor.RegisterNeighbour(Trophyroom);
+            Upperfloor.RegisterNeighbour(Badroom2);
+            Trophyroom.RegisterNeighbour(Upperfloor);
+            Badroom2.RegisterNeighbour(Upperfloor);
 
             CurrentRoom = lobby;
             

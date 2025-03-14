@@ -10,7 +10,7 @@ namespace Adventure.Items
     { 
         public override string Name => "Sword";
 
-        public override string Description => "Very Big and sharp, with mysterious writing on it";
+        public override string Description => "Very Big and sharp golden sword, with mysterious writing on it, that sayes A heros sopitam uterque ";
 
     }
 }

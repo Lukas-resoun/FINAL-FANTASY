@@ -8,8 +8,8 @@ namespace Adventure.Rooms
 {
     public class Starcase : BaseRoom
     {
-        public override string Name => "Stairs";
+        public override string Name => "Starcase";
 
-        public override string Description => "Large stair, leading to uper level";
+        public override string Description => "Large stairs, leading to uper level";
     }
 }

@@ -10,6 +10,6 @@ namespace Adventure.Items
     {
         public override string Name => "Letter";
 
-        public override string Description => "letter, with mysterios writting on it";
+        public override string Description => "letter, written in mysterios language adressed to: someone called Ultimacia";
     }
 }
