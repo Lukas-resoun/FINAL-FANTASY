@@ -20,6 +20,7 @@ namespace Adventure.Commands
             AnsiConsole.WriteLine("go [current room name] - go to current room");
             AnsiConsole.WriteLine("help - shows this help");
             AnsiConsole.WriteLine("quit - exits the game");
+            AnsiConsole.WriteLine("inve - open inventory");
         }
     }
 }

@@ -12,7 +12,9 @@ namespace Adventure.Commands
         public override void Execute(World world, params string[] @params)
         {
             var item = world.CurrentRoom.items.FirstOrDefault(i => i.Name == @params[0]);
+            world.Inventory.AddItem(item);
             world.CurrentRoom.RemoveItem(item);
+          
         }
     }
 }

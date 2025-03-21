@@ -11,7 +11,7 @@ namespace Adventure
     public class World
     {
         public BaseRoom CurrentRoom { get; private set; }
-
+        public Inventory Inventory { get; } = new();
         public World() 
         {
             var lobby = new Lobby();
@@ -39,7 +39,7 @@ namespace Adventure
             Badroom2.RegisterNeighbour(Upperfloor);
 
             CurrentRoom = lobby;
-            
+        
             
         }
         public void SwitchRoom(BaseRoom room)
