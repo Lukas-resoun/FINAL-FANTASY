@@ -17,5 +17,7 @@ namespace Adventure.Rooms
         public override string Name => "Badroom";
 
         public override string Description => $"Large Badroom, with Big bed and large painting aboth with mysterios Woman, who looks like a witch and a {string.Join(",", items)} on a desk";
+        public override bool IsLocked { get; set; } = true;
     }
+   
 }

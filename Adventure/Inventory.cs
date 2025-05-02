@@ -20,6 +20,27 @@ namespace Adventure
         {
             items.Remove(item);
         }
+        //public void UseItem(string itemName)
+        //{
+        //    var item = items.FirstOrDefault(i => i.Name.ToLower() == itemName.ToLower());
+        //    if (item != null)
+        //    {
+        //        item.Use();
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"{itemName} se v inventáři nenachází.");
+        //    }
+        //}
+
+        public void ShowInventory()
+        {
+            Console.WriteLine("Obsah inventáře:");
+            foreach (var item in items)
+            {
+                Console.WriteLine($"- {item.Name}: {item.Description}");
+            }
+        }
 
     }
    

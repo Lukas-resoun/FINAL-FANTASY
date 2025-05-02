@@ -21,6 +21,7 @@ namespace Adventure.Commands
             AnsiConsole.WriteLine("help - shows this help");
             AnsiConsole.WriteLine("quit - exits the game");
             AnsiConsole.WriteLine("inve - open inventory");
+            AnsiConsole.WriteLine("use [current item name] - use current item");
         }
     }
 }

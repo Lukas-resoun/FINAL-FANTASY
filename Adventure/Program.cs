@@ -13,6 +13,7 @@ var commands = new Dictionary<string, BaseCommand>()
     { "quit", new QuitCommand() },
     { "pick", new Pickupcommand() },
     { "go", new Gocommand() },
+    { "use", new UseCommand() },
     {"inve", new InventoryCommand() },
 }; 
 

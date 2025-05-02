@@ -15,5 +15,10 @@ namespace Adventure.Items
         {
             return Name;
         }
+        public virtual void Use(World world)
+        {
+            Console.WriteLine($"Používáš {Name}: {Description}");
+        }
     }
 }
+

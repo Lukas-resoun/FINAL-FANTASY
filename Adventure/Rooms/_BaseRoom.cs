@@ -16,6 +16,7 @@ namespace Adventure.Rooms
 
         public abstract string Name { get; }
         public abstract string Description { get; }
+        public virtual bool IsLocked { get; set; } = false;
 
         public void RegisterNeighbour(BaseRoom room)
         {

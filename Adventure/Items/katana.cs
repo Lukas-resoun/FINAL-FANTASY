@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spectre.Console;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,22 @@ namespace Adventure.Items
         public override string Name => "Katana";
 
         public override string Description => "very long decorated katana";
+
+
+        public override void Use(World world)
+        {
+            var room = world.CurrentRoom.neighbours.FirstOrDefault(n => n.IsLocked);
+
+            if (room == null)
+            {
+                AnsiConsole.MarkupLine("[red] It´s no use.[/]");
+                return;
+            }
+
+            room.IsLocked = false;
+
+            var item = world.Inventory.items.FirstOrDefault(i => i.Name == Name);
+            world.Inventory.RemoveItem(item);
+        }
     }
 }

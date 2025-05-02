@@ -26,6 +26,12 @@ namespace Adventure.Commands
                 return;
             }
 
+            if (room.IsLocked) 
+            {
+                AnsiConsole.MarkupLine("[red] Room is locked.[/]");
+                return;
+            }
+
             world.SwitchRoom(room);
             
                 

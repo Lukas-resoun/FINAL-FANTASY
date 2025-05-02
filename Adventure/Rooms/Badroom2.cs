@@ -17,6 +17,7 @@ namespace Adventure.Rooms
 
         public override string Description => $"Another, badroom bud here on pickture is someone who looks like eggy a teenager with guneblade in his hand there is also the same {string.Join(",", items)} on wall";
 
-        
+        public override bool IsLocked { get; set; } = true;
     }
+    
 }
