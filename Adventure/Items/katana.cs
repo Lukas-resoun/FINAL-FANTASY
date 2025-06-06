@@ -11,7 +11,7 @@ namespace Adventure.Items
     {
         public override string Name => "Katana";
 
-        public override string Description => "very long decorated katana";
+        public override string Description => "very long decorated katana, with decorated writting on it that says Masamune";
 
 
         public override void Use(World world)

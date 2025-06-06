@@ -15,6 +15,7 @@ var commands = new Dictionary<string, BaseCommand>()
     { "go", new Gocommand() },
     { "use", new UseCommand() },
     {"inve", new InventoryCommand() },
+    {"inspect", new InspectCommand() },
 }; 
 
 AnsiConsole.MarkupLine(world.Intro);

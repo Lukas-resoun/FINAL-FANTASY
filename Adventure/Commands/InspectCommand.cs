@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Adventure.Commands
 {
-    public class UseCommand : BaseCommand
+    public class InspectCommand : BaseCommand
     {
         public override void Execute(World world, params string[] @params)
         {
@@ -25,8 +25,7 @@ namespace Adventure.Commands
                 return;
             }
 
-            item.Use(world);
+            AnsiConsole.MarkupLine($"This item is:{string.Join(",", item.Description)}");
         }
     }
 }
-
