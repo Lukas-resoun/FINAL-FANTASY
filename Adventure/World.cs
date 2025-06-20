@@ -22,6 +22,9 @@ namespace Adventure
             var Upperfloor = new Upperfloor();
             var Trophyroom = new Trophyroom();
             var Badroom2 = new Badroom2();
+            var Garden = new Garden();
+            var Secret_Time_Lair = new Secret_Time_Lair();
+            var My_Past = new My_Past();
 
             lobby.RegisterNeighbour(corridor);
             corridor.RegisterNeighbour(lobby);
@@ -35,8 +38,13 @@ namespace Adventure
             Upperfloor.RegisterNeighbour(staircase);
             Upperfloor.RegisterNeighbour(Trophyroom);
             Upperfloor.RegisterNeighbour(Badroom2);
+            Upperfloor.RegisterNeighbour(Garden);
             Trophyroom.RegisterNeighbour(Upperfloor);
             Badroom2.RegisterNeighbour(Upperfloor);
+            Garden.RegisterNeighbour(Upperfloor);
+            Garden.RegisterNeighbour(Secret_Time_Lair);
+            Secret_Time_Lair.RegisterNeighbour(Garden);
+            Secret_Time_Lair.RegisterNeighbour(My_Past);
 
             CurrentRoom = lobby;
         

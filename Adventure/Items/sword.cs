@@ -1,4 +1,5 @@
-﻿using Spectre.Console;
+﻿using Adventure.Rooms;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Adventure.Items
 
         public override void Use(World world)
         {
-            var room = world.CurrentRoom.neighbours.FirstOrDefault(n => n.IsLocked);
+            var room = world.CurrentRoom.neighbours.FirstOrDefault(n => n.IsLocked && n.Name== "Badroom");
 
             if (room == null)
             {

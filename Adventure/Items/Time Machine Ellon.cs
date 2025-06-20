@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace Adventure.Items
 {
-    public class katana : BaseItem
+    public class Time_Machine_Ellon : BaseItem
     {
-        public override string Name => "Katana";
+        public override string Name => "Time_Machine_Ellon";
 
-        public override string Description => "very long decorated katana, with decorated writting on it that says Masamune";
-
+        public override string Description => "Mysterios Headset, with carving on it that sayes: Time Machine Ellon.";
 
         public override void Use(World world)
         {
-            var room = world.CurrentRoom.neighbours.FirstOrDefault(n => n.IsLocked && n.Name =="Badroom2");
+            var room = world.CurrentRoom.neighbours.FirstOrDefault(n => n.IsLocked && n.Name == "My_Past");
 
             if (room == null)
             {
@@ -29,5 +28,6 @@ namespace Adventure.Items
             var item = world.Inventory.items.FirstOrDefault(i => i.Name == Name);
             world.Inventory.RemoveItem(item);
         }
+
     }
 }
